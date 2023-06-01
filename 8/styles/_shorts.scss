@@ -1,0 +1,13 @@
+@mixin fullflex($flow){
+    display: flex;
+    flex-flow: $flow;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin partialflex($flow, $align, $justify){
+    display: flex;
+    flex-flow: $flow;
+    align-items: $align;
+    justify-content: $justify;
+}

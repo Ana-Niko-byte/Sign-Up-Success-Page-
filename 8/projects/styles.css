@@ -1,0 +1,191 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  background-color: hsl(234, 29%, 20%);
+}
+
+#page-1 {
+  display: block;
+  background-color: hsl(0, 0%, 100%);
+  max-width: 930px;
+  min-width: 280px;
+  margin: 10% auto;
+  border-radius: 20px;
+}
+#page-1 .main {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+#page-1 .main section img.main {
+  width: 100%;
+}
+#page-1 .main section #updated {
+  padding: 15px;
+}
+#page-1 .main #updated {
+  max-width: 450px;
+  margin-left: 15px;
+}
+#page-1 .main #updated h1 {
+  font-size: clamp(40px, 12vw, 70px);
+  color: hsl(235, 18%, 26%);
+  padding-bottom: 30px;
+  margin-top: 20px;
+}
+#page-1 .main #updated h2 {
+  font-size: clamp(8px, 12vw, 18px);
+  color: hsl(235, 18%, 26%);
+  font-weight: 400;
+}
+#page-1 .main #updated .wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  justify-content: start;
+  margin: 20px 0;
+}
+#page-1 .main #updated .wrapper .checklist {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+}
+#page-1 .main #updated .wrapper .checklist h3 {
+  font-size: clamp(8px, 12vw, 13px);
+  margin-left: 10px;
+  font-weight: 400;
+}
+#page-1 .main #updated form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+#page-1 .main #updated form label {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+#page-1 .main #updated form label h3 {
+  font-size: clamp(8px, 12vw, 13px);
+  color: hsl(235, 18%, 26%);
+}
+#page-1 .main #updated form label span {
+  color: red;
+  font-size: 12px;
+}
+#page-1 .main #updated form input, #page-1 .main #updated form button {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 8px;
+  margin: 5px 0;
+}
+#page-1 .main #updated form input {
+  outline: none;
+  border: 1px solid rgb(164, 164, 164);
+}
+#page-1 .main #updated form input:active, #page-1 .main #updated form input:focus {
+  border: 1px solid hsl(235, 18%, 26%);
+}
+#page-1 .main #updated form button {
+  background-color: hsl(234, 29%, 20%);
+  border: 2px solid hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+#page-1 .main #updated button:hover {
+  background-position: right center;
+  background-image: linear-gradient(to right, #faa535 0%, #d7004f 51%, #ffd034 100%);
+}
+
+#page-2 {
+  display: none;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 450px;
+  margin: 0 auto;
+  position: absolute;
+  left: 500px;
+  bottom: 100px;
+}
+#page-2 .page-2-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  justify-content: center;
+  padding: 40px;
+}
+#page-2 .page-2-container img {
+  width: 50px;
+  padding-bottom: 10px;
+}
+#page-2 .page-2-container h1, #page-2 .page-2-container h4 {
+  padding: 10px;
+}
+#page-2 .page-2-container h1 {
+  font-size: clamp(40px, 12vw, 70px);
+}
+#page-2 .page-2-container h4 {
+  font-weight: 400;
+  font-size: clamp(8px, 12vw, 14px);
+  max-width: 400px;
+  line-height: 20px;
+  color: hsl(235, 18%, 26%);
+}
+#page-2 .page-2-container form {
+  width: 100%;
+  margin-top: 30px;
+}
+#page-2 .page-2-container form button {
+  width: 100%;
+  padding: 15px 0;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid hsl(0, 0%, 100%);
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+#page-2 .page-2-container form button:hover {
+  background-position: right center;
+  background-image: linear-gradient(to right, #faa535 0%, #d7004f 51%, #ffd034 100%);
+}
+
+@media all and (max-width: 400px) {
+  #image {
+    width: 100%;
+  }
+  #updated {
+    padding-right: 18px;
+  }
+  #page-1 h1 {
+    margin-top: 3rem;
+  }
+  form {
+    margin-top: 2.5rem;
+  }
+}
+@media all and (min-width: 400px) {
+  section {
+    padding: 15px;
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,207 @@
+@import '_shorts';
+@import '_style-guides';
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    font-family: $font;
+}
+
+html, body{
+    background-color: $dgrey;
+}
+
+#page-1{
+    display: block;
+    background-color: $white;
+    max-width: 930px;
+    min-width: 280px;
+    margin: 10% auto;
+    border-radius: 20px;
+
+    .main{
+        @include partialflex(row-reverse wrap, center, space-around);
+        section{
+
+            img.main{
+                width: 100%;
+            }
+
+            #updated{
+                padding: 15px;
+            }
+        }
+        #updated{
+            max-width: 450px;
+            margin-left: 15px;
+
+            h1{
+                font-size: map-get($size, "h1");
+                color: $smoke;
+                padding-bottom: 30px;
+                margin-top: 20px;
+            }
+
+            h2{
+                font-size: map-get($size, "h2");
+                color: $smoke;
+                font-weight: map-get($weight, "regular");
+            }
+
+            .wrapper{
+                @include partialflex(column nowrap, start, start);
+                margin: 20px 0;
+
+                .checklist{
+                    @include partialflex(row nowrap, center, start);
+                    padding: 10px;
+
+                    h3{
+                        font-size: map-get($size, "h3");
+                        margin-left: 10px;
+                        font-weight: map-get($weight, "regular");
+                    }
+                }
+            }
+
+            form{
+                @include partialflex(column nowrap, center, center);
+                gap: 8px;
+
+                label{
+                    @include partialflex(row wrap, center, space-between);
+                    width: 100%;
+
+                    h3{
+                        font-size: map-get($size, "h3");
+                        color: $smoke;
+                    }
+
+                    span{
+                        color: red;
+                        font-size: 12px;
+                    }
+
+                }
+                
+                input, button{
+                    width: 100%;
+                    text-align: center;
+                    padding: 15px 0;
+                    border-radius: 8px;
+                    margin: 5px 0;
+                }
+
+                input{
+                    outline: none;
+                    border: 1px solid rgb(164, 164, 164);
+
+                    &:active, &:focus{
+                        border: 1px solid $smoke;
+                    }
+                }
+
+                button{
+                    background-color: $dgrey;
+                    border: 2px solid $white;
+                    color: $white;
+                    font-weight: map-get($weight, "bold");
+                    letter-spacing: 1px;
+                    margin-bottom: 3rem;
+                    transition: 0.5s;
+                    background-size: 200% auto;
+                }
+            }
+
+            button:hover {
+                background-position: right center;
+                background-image: linear-gradient(to right, #faa535 0%, #d7004f 51%, #ffd034 100%);
+            }
+        }
+    }
+}
+
+#page-2{
+    display: none;
+    background-color: $white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 450px;
+    margin: 0 auto;
+    position: absolute;
+    left: 500px;
+    bottom: 100px;
+
+    .page-2-container{
+        @include partialflex(column nowrap, start, center);
+        padding: 40px;
+
+        img{
+            width: 50px;
+            padding-bottom: 10px;
+        }
+        h1, h4{
+            padding: 10px;
+        }
+
+        h1{
+            font-size: map-get($size, "h1");
+        }
+
+        h4{
+            font-weight: map-get($weight, "regular");
+            font-size: map-get($size, "h4");
+            max-width: 400px;
+            line-height: 20px;
+            color: $smoke;
+        }
+
+        form{
+            width: 100%;
+            margin-top: 30px;
+
+            button{
+                width: 100%;
+                padding: 15px 0;
+                background-color: $dgrey;
+                color: $white;
+                border-radius: 5px;
+                outline: none;
+                border: 2px solid $white;
+                font-weight: map-get($weight, "bold");
+                letter-spacing: 1px;
+                transition: 0.5s;
+                background-size: 200% auto;
+            }
+
+            button:hover {
+                background-position: right center;
+                background-image: linear-gradient(to right, #faa535 0%, #d7004f 51%, #ffd034 100%);
+            }
+            }
+        }
+    }
+    
+@media all and (max-width: 400px){
+    #image{
+        width: 100%;
+    }
+
+    #updated{
+        padding-right: 18px;
+    }
+
+    #page-1 h1{
+        margin-top: 3rem;
+    }
+
+    form{
+        margin-top: 2.5rem;
+    }
+}
+
+@media all and (min-width: 400px){
+    section{
+        padding: 15px;
+    }
+}

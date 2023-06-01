@@ -1,0 +1,21 @@
+$tomato: hsl(4, 100%, 67%);
+$dgrey: hsl(234, 29%, 20%);
+$smoke: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+$blue: hsl(228, 45%, 44%);
+
+$font: 'Roboto', sans-serif;
+$weight: (
+    "regular": 400,
+    "bold": 700
+);
+
+$size: (
+    "default": 16px,
+    "h1": clamp(40px, 12vw, 70px),
+    "h2": clamp(8px, 12vw, 18px),
+    "h3": clamp(8px, 12vw, 13px),
+    "h4": clamp(8px, 12vw, 14px),
+    "p": clamp(10px, 2vw, 14px)
+);
